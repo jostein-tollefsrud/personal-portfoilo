@@ -9,6 +9,7 @@ export default function Home() {
       </Head>
       <main>
         <h1>Jostein Tollefsrud</h1>
+        <p>Her kommer ny portfolio for meg selv.</p>
       </main>
     </>
   );

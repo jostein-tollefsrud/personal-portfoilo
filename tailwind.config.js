@@ -5,8 +5,10 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
-    colors: {},
+    fontFamily: {
+      body: ['"Courier Prime"', 'monospace'],
+      heading: ['Barlow', 'sans-serif'],
+    },
   },
   variants: {
     extend: {},

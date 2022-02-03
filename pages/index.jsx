@@ -20,7 +20,8 @@ export default function Home({ projects }) {
       </Head>
       <header>
         <h1>
-          Jostein Tollefsrud <span>Webutvikler</span>
+          <span className="font-light block">Jostein Tollefsrud</span>{' '}
+          Webutvikler
         </h1>
         <Link href="/">
           <a>Kontakt meg</a>

@@ -6,9 +6,7 @@ import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
-    // <ThemeProvider enableSystem={true} attribute="class">
-    // remove comment and remove provider under when added button for switching darkmode
-    <ThemeProvider>
+    <ThemeProvider enableSystem={false} attribute="class">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />

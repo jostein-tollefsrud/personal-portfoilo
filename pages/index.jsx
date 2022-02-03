@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Home() {
+export default function Home({ projects }) {
+  const projectList = projects.map((project) => {
+    return (
+      <li key={project.id}>
+        <Link href={'#'}>
+          <a>{project.title}</a>
+        </Link>
+      </li>
+    );
+  });
+
   return (
     <>
       <Head>
@@ -10,7 +20,8 @@ export default function Home() {
       </Head>
       <header>
         <h1>
-          Jostein Tollefsrud <span>Webutvikler</span>
+          <span className="font-light block">Jostein Tollefsrud</span>{' '}
+          Webutvikler
         </h1>
         <Link href="/">
           <a>Kontakt meg</a>
@@ -21,23 +32,23 @@ export default function Home() {
       </header>
       <main>
         <h2>Mine prosjekter</h2>
-        <p>liste over prosjekter her...</p>
+        {projectList}
       </main>
     </>
   );
 }
 
-// export async function getStaticProps() {
-//   // Fetch data from external API
-//   const res = await fetch(
-//     `https://josteintollefsrud-backend.herokuapp.com/projects`
-//   );
-//   const data = await res.json();
+export async function getStaticProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    `https://josteintollefsrud-backend.herokuapp.com/projects`
+  );
+  const data = await res.json();
 
-//   // Pass data to the page via props
-//   return {
-//     props: {
-//       projects: data,
-//     },
-//   };
-// }
+  // Pass data to the page via props
+  return {
+    props: {
+      projects: data,
+    },
+  };
+}

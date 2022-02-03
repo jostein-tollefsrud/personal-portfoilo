@@ -11,12 +11,23 @@
     @apply text-xl;
   }
 
-  header {
-    @apply py-12;
-  } */
+   */
 
   body {
-    @apply font-body;
+    @apply font-body sm:text-lg md:text-xl bg-yellow-50 dark:bg-neutral-900;
+  }
+
+  header {
+    @apply my-12 sm:my-24 md:my-36;
+  }
+
+  input,
+  textarea {
+    @apply bg-inherit border-2 border-black mb-5 dark:text-black p-2 sm:p-4;
+  }
+
+  label {
+    @apply dark:text-black;
   }
 
   img {
@@ -33,7 +44,11 @@
   }
 
   h1 {
-    @apply text-4xl;
+    @apply text-4xl mb-6 sm:mb-12 sm:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-4xl lg:text-5xl;
   }
 }
 
@@ -60,4 +75,20 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width: 640px) {
+  .contact-container {
+    display: flex;
+    align-items: center;
+    /* margin-top: 2rem; */
+  }
+
+  .contact-container > * {
+    width: 50%;
+  }
+
+  .contact-container header {
+    padding-right: 2rem;
+  }
 }

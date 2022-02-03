@@ -12,10 +12,10 @@ const About = () => {
         <h1>Om meg</h1>
 
         <Link href="/">
-          <a>Last ned CV</a>
+          <a className="text-blue-600 font-bold block mb-5">Last ned CV</a>
         </Link>
         <Link href="/">
-          <a>GitHub profil</a>
+          <a className="text-blue-600 font-bold">GitHub profil</a>
         </Link>
       </header>
       <main>

@@ -21,8 +21,8 @@ const Contact = () => {
             Kontakt meg på skjemaet nedenfor, eller send meg en e-post direkte
           </p>
         </header>
-        <main>
-          <form className="bg-yellow-400 dark:bg-yellow-300 grid p-8">
+        <main className="mainContainer">
+          <form className="bg-yellow-400 dark:bg-neutral-800 grid p-8">
             <label htmlFor="name">Fullt navn</label>
             <input type="text" name="name" id="name" />
 

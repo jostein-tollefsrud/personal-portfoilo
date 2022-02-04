@@ -18,7 +18,7 @@ const About = () => {
           <a className="text-blue-600 font-bold">GitHub profil</a>
         </Link>
       </header>
-      <main>
+      <main className="mainContainer">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industrys standard dummy text ever

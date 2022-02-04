@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="stickyFooter">
       <Navbar />
-      <Container>{children}</Container>
+      <div>{children}</div>
       <Footer />
     </div>
   );

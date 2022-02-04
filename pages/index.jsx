@@ -1,16 +1,19 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import DownloadCV from '../components/DownloadCV';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-export default function Home() {
-  //   const projectList = projects.map((project) => {
-  //     return (
-  //       <li key={project.id}>
-  //         <Link href={'#'}>
-  //           <a>{project.title}</a>
-  //         </Link>
-  //       </li>
-  //     );
-  //   });
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home', 'common'])),
+    },
+  };
+}
+
+export default function Home(props) {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -21,7 +24,7 @@ export default function Home() {
       <header className="main_header">
         <h1>
           <span className="font-light block">Jostein Tollefsrud</span>{' '}
-          Webutvikler
+          {t('home:title')}
         </h1>
         <div>
           <Link href="/kontakt">
@@ -29,30 +32,12 @@ export default function Home() {
               Kontakt meg
             </a>
           </Link>
-          <Link href="#">
-            <a className="text-blue-600">Last ned CV</a>
-          </Link>
+          <DownloadCV value={t('common:downloadCVTitle')} />
         </div>
       </header>
       <main className="mainContainer">
-        <h2>Mine prosjekter</h2>
-        {/* {projectList} */}
+        <h2>{t('home:projectsTitle')}</h2>
       </main>
     </>
   );
 }
-
-// export async function getStaticProps() {
-//   // Fetch data from external API
-//   const res = await fetch(
-//     `https://josteintollefsrud-backend.herokuapp.com/projects`
-//   );
-//   const data = await res.json();
-
-//   // Pass data to the page via props
-//   return {
-//     props: {
-//       projects: data,
-//     },
-//   };
-// }

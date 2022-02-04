@@ -6,7 +6,7 @@ import DownloadCV from '../../components/DownloadCV';
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['contact', 'common'])),
+      ...(await serverSideTranslations(locale, ['contact', 'common', 'form'])),
     },
   };
 }
@@ -29,20 +29,20 @@ const Contact = () => {
         </header>
         <main className="mainContainer">
           <form className="bg-yellow-400 dark:bg-neutral-800 grid p-8">
-            <label htmlFor="name">Fullt navn</label>
+            <label htmlFor="name">{t('form:fullName')}</label>
             <input type="text" name="name" id="name" />
 
-            <label htmlFor="mail">E-post adresse</label>
+            <label htmlFor="mail">{t('form:email')}</label>
             <input type="mail" name="mail" id="mail" />
 
-            <label htmlFor="message">Melding</label>
+            <label htmlFor="message">{t('form:msg')}</label>
             <textarea name="message" id="message"></textarea>
 
             <button
               className="bg-blue-600 text-white font-heading font-bold tracking-wider py-5"
               type="submit"
             >
-              Send melding
+              {t('form:send_msg')}
             </button>
           </form>
         </main>

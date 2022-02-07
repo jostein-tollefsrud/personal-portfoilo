@@ -3,7 +3,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllProjectSlugs, getProjectData } from '../../lib/projects';
 
-const ProjectPage = ({ projectData: { title, content, date } }) => {
+const ProjectPage = ({ projectData: { title, content, date, tags } }) => {
+  let tagList;
+  if (tags) {
+    tagList = tags.map((tag) => (
+      <li className="tags" key={tag}>
+        {tag}
+      </li>
+    ));
+  }
   return (
     <>
       <Head>
@@ -11,6 +19,7 @@ const ProjectPage = ({ projectData: { title, content, date } }) => {
       </Head>
       <header>
         <h1>{title}</h1>
+        <ul className="flex gap-4">{tagList}</ul>
       </header>
       <main className="mainContainer">
         <Link href="/">Tilbake</Link>

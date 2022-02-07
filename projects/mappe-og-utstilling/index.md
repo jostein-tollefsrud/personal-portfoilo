@@ -2,7 +2,7 @@
 title: 'Mappe og utstilling'
 date: 'March 5, 2021'
 excerpt: 'Django is a very powerful, high level Python framework for building web applications'
-cover_image: '/images/projects/afeta-1.jpg'
+cover_image: '/images/projects/mockup.jpeg'
 tags: ['JavaScript', 'Next.js', 'i18n']
 ---
 

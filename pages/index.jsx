@@ -1,20 +1,16 @@
+// Imports for markdown posts
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
 import Head from 'next/head';
 import Link from 'next/link';
-import DownloadCV from '../components/DownloadCV';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        'home',
-        'common',
-        'navigation',
-      ])),
-    },
-  };
-}
+// Import components
+import DownloadCV from '../components/DownloadCV';
+import Card from '../components/Card';
 
 export default function Home(props) {
   const { t } = useTranslation();
@@ -42,7 +38,88 @@ export default function Home(props) {
       </header>
       <main className="mainContainer">
         <h2>{t('home:projectsTitle')}</h2>
+        {props.allProjectsData.map((project, index) => (
+          <Card key={index} project={project} />
+        ))}
       </main>
     </>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  const {
+    i18n: { defaultLocale },
+  } = require('../next-i18next.config');
+
+  // Get directorys from the projects directory
+  const projectsDirectory = fs.readdirSync(path.join('projects'));
+
+  // Get slug and frontmatter from posts
+  const allProjectsData = projectsDirectory.map((directory) => {
+    const fileName =
+      locale === defaultLocale ? 'index.md' : `index.${locale}.md`;
+    const fullPath = path.join('projects', directory, fileName);
+
+    if (!fs.existsSync(fullPath)) {
+      return null;
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    // User gray-matter to parse the project metadata section
+    const { data: frontmatter } = matter(fileContents);
+
+    // Combine the data with the directory
+    return {
+      directory,
+      ...frontmatter,
+    };
+  });
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'home',
+        'common',
+        'navigation',
+      ])),
+
+      allProjectsData,
+    },
+  };
+}
+
+// export async function getStaticProps({ locale }) {
+//   // Get files from the posts directory
+//   const files = fs.readdirSync(path.join('projects'));
+
+//   // Get slug and frontmatter from posts
+//   const projects = files.map((filename) => {
+//     // Create slug
+//     const slug = filename.replace('.md', '');
+
+//     // Get frontmatter
+//     const markdownWithMeta = fs.readFileSync(
+//       path.join('projects', filename),
+//       'utf-8'
+//     );
+
+//     const { data: frontmatter } = matter(markdownWithMeta);
+
+//     return {
+//       slug,
+//       frontmatter,
+//     };
+//   });
+
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, [
+//         'home',
+//         'common',
+//         'navigation',
+//       ])),
+//       projects,
+//     },
+//   };
+// }

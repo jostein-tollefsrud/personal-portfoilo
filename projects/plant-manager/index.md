@@ -1,8 +1,9 @@
 ---
-title: 'Dette er en norsk tittel'
+title: 'Plante administrering'
 date: 'March 5, 2021'
 excerpt: 'Django is a very powerful, high level Python framework for building web applications'
 cover_image: '/images/projects/afeta-1.jpg'
+tags: ['JavaScript', 'Next.js', 'i18n']
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

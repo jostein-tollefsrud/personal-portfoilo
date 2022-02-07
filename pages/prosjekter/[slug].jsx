@@ -1,6 +1,3 @@
-// import fs from 'fs';
-// import path from 'path';
-// import matter from 'gray-matter';
 import { marked } from 'marked';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -15,7 +12,7 @@ const ProjectPage = ({ projectData: { title, content, date } }) => {
       <header>
         <h1>{title}</h1>
       </header>
-      <main>
+      <main className="mainContainer">
         <Link href="/">Tilbake</Link>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </main>
@@ -26,7 +23,7 @@ const ProjectPage = ({ projectData: { title, content, date } }) => {
 export default ProjectPage;
 
 export const getStaticPaths = async ({ locales }) => {
-  // Get all project paths
+  // Get all projects paths
   const paths = await getAllProjectSlugs(locales);
 
   return {
@@ -36,28 +33,8 @@ export const getStaticPaths = async ({ locales }) => {
 };
 
 export const getStaticProps = async ({ params: { slug }, locale }) => {
-  const {
-    i18n: { defaultLocale },
-  } = require('../../next-i18next.config');
-
+  // Get all the project data with correct translation using locale
   const projectData = await getProjectData(slug, locale);
-
-  //   const fullPath = path.join(
-  //     'projects',
-  //     slug,
-  //     locale === defaultLocale ? 'index.md' : `index.${locale}.md`
-  //   );
-
-  //   const fileContents = fs.readFileSync(fullPath, 'utf-8');
-
-  //   const { data: frontmatter, content } = matter(fileContents);
-
-  // const markdownWithMeta = fs.readFileSync(
-  //   path.join('projects', slug + '.md'),
-  //   'utf-8'
-  // );
-
-  //   const { data: frontmatter, content } = matter(markdownWithMeta);
 
   return {
     props: {
@@ -65,41 +42,3 @@ export const getStaticProps = async ({ params: { slug }, locale }) => {
     },
   };
 };
-
-// export const getStaticPaths = async () => {
-//   const files = fs.readdirSync(path.join('projects'));
-
-//   //   const paths = files.map((filename) => ({
-//   //     params: {
-//   //       slug: filename.replace('.md', ''),
-//   //     },
-//   //   }));
-
-//   const paths = files.map((filename) => ({
-//     params: {
-//       slug: filename,
-//     },
-//   }));
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
-// export const getStaticProps = async ({ params: { slug } }) => {
-//   const markdownWithMeta = fs.readFileSync(
-//     path.join('projects', slug + '.md'),
-//     'utf-8'
-//   );
-
-//   const { data: frontmatter, content } = matter(markdownWithMeta);
-
-//   return {
-//     props: {
-//       frontmatter,
-//       slug,
-//       content,
-//     },
-//   };
-// };

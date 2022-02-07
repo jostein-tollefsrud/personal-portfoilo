@@ -1,15 +1,20 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Card = ({ project }) => {
-  console.log(project.title);
+  let tags;
+  if (project.tags) {
+    tags = project.tags.map((tag) => <div key={tag}>{tag}</div>);
+  }
   return (
     <article>
-      <h3>{project.title}</h3>
+      <h3>
+        <Link href={`/prosjekter/${project.directory}`}>{project.title}</Link>
+      </h3>
       <img src={project.cover_image} />
-      <Link href={`/prosjekter/${project.directory}`}>
+      {tags}
+      {/* <Link href={`/prosjekter/${project.directory}`}>
         <a>Les mer</a>
-      </Link>
+      </Link> */}
     </article>
   );
 };

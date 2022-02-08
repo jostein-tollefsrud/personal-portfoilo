@@ -1,7 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import DownloadCV from '../../components/DownloadCV';
+import DownloadCVLink from '../../components/DownloadCVLink/DownloadCVLink';
+import GitHubLink from '../../components/GithubLink/GithubLink';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -23,7 +24,9 @@ const Contact = () => {
         <header>
           <h1>{t('contact:title')}</h1>
 
-          <DownloadCV value={t('common:downloadCVTitle')} />
+          <DownloadCVLink value={t('common:downloadCVTitle')} />
+
+          <GitHubLink value={t('common:githubProfile')} />
 
           <p>{t('contact:desc')}</p>
         </header>

@@ -9,7 +9,7 @@ const ProjectPage = ({
   let tagList;
   if (tags) {
     tagList = tags.map((tag) => (
-      <li className="tags" key={tag}>
+      <li className="tags dark:border-neutral-500" key={tag}>
         {tag}
       </li>
     ));
@@ -22,7 +22,7 @@ const ProjectPage = ({
       </Head>
       <header>
         <h1>{title}</h1>
-        <ul className="flex gap-4">{tagList}</ul>
+        <ul className="flex flex-wrap justify-center gap-4">{tagList}</ul>
       </header>
       <main className="mainContainer">
         <Link href="/">Tilbake</Link>

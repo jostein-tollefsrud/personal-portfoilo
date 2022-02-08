@@ -95,7 +95,8 @@ header p {
 }
 
 footer {
-  padding: 3em 1em 1em 1em;
+  padding: 1em;
+  margin-top: 3em;
 }
 
 input,

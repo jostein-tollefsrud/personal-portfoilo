@@ -1,9 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import Link from 'next/link';
-import { FiExternalLink } from 'react-icons/fi';
-import DownloadCV from '../../components/DownloadCV';
+import DownloadCVLink from '../../components/DownloadCVLink/DownloadCVLink';
+import GitHubLink from '../../components/GithubLink/GithubLink';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -24,13 +23,8 @@ const About = (props) => {
       <header>
         <h1>{t('about:title')}</h1>
 
-        <DownloadCV value={t('common:downloadCVTitle')} />
-        <Link href="/">
-          <a className="text-blue-600">
-            {t('common:githubProfile')}{' '}
-            <FiExternalLink className="inline mb-1" />
-          </a>
-        </Link>
+        <DownloadCVLink value={t('common:downloadCVTitle')} />
+        <GitHubLink value={t('common:githubProfile')} />
       </header>
       <main className="mainContainer">
         <p>

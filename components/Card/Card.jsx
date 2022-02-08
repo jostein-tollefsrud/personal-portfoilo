@@ -4,7 +4,7 @@ const Card = ({ project }) => {
   let tags;
   if (project.tags) {
     tags = project.tags.map((tag) => (
-      <li className="tags" key={tag}>
+      <li className="tags dark:border-neutral-600" key={tag}>
         {tag}
       </li>
     ));
@@ -14,7 +14,7 @@ const Card = ({ project }) => {
       <h3>
         <Link href={`/prosjekter/${project.directory}`}>{project.title}</Link>
       </h3>
-      <img src={project.cover_image} />
+      <img src={project.cover_image} alt="" />
       <ul className="tags-container">{tags}</ul>
       {/* <Link href={`/prosjekter/${project.directory}`}>
         <a>Les mer</a>

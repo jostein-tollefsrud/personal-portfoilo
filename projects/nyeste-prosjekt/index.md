@@ -1,15 +1,14 @@
 ---
 title: 'Nyeste prosjekt'
 date: 'March 5, 2021'
-excerpt: 'Django is a very powerful, high level Python framework for building web applications'
+excerpt: 'Dette er et av mine nyeste prosjekter.'
 cover_image: '/images/projects/mockup.jpeg'
-tags: ['JavaScript', 'Next.js', 'i18n']
+tags: ['JavaScript', 'React.js', 'MongoDB', 'Express']
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat
-haec praepes [partes epulae](http://cui.com/), in egisse de. Caecisque ter
-manus. Munere in exhalat, ferre sed [habe quaeque saepe](http://ne.org/fretum)
-verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide postponere
+haec praepes, in egisse de. Caecisque ter
+manus. Munere in exhalat, ferre sed verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide postponere
 pavida ne omnes etiam, atque. Sonuit omina sed sine haerebat illic fit a mora
 in.
 

@@ -4,7 +4,7 @@ const Card = ({ project }) => {
   let tags;
   if (project.tags) {
     tags = project.tags.map((tag) => (
-      <li className="tags" key={tag}>
+      <li className="tags dark:border-neutral-600" key={tag}>
         {tag}
       </li>
     ));

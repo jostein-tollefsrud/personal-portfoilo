@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllProjectSlugs, getProjectData } from '../../lib/projects';
 
-const ProjectPage = ({ projectData: { title, content, date, tags } }) => {
+const ProjectPage = ({
+  projectData: { title, content, date, tags, excerpt },
+}) => {
   let tagList;
   if (tags) {
     tagList = tags.map((tag) => (
@@ -16,6 +18,7 @@ const ProjectPage = ({ projectData: { title, content, date, tags } }) => {
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={excerpt} />
       </Head>
       <header>
         <h1>{title}</h1>

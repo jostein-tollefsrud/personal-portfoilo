@@ -13,7 +13,7 @@ const Footer = () => {
   ));
   return (
     <footer className="text-center">
-      {localeList}
+      <ul>{localeList}</ul>
       <Container>Laget av meg med Next.js</Container>
     </footer>
   );

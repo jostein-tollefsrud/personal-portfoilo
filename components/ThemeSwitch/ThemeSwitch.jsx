@@ -15,7 +15,11 @@ const ThemeSwitch = () => {
       className="themeSwitch"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      {theme === 'light' ? <FiMoon /> : <FiSun />}
+      {theme === 'light' ? (
+        <FiMoon aria-hidden="true" />
+      ) : (
+        <FiSun aria-hidden="true" />
+      )}
     </button>
   );
 };

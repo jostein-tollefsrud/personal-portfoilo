@@ -1,20 +1,18 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Container from '../Container/Container';
 
 const Footer = () => {
   const router = useRouter();
-  const localeList = router.locales.map((locale) => (
-    <li key={locale}>
-      <Link href={router.asPath} locale={locale}>
-        <a>{locale}</a>
-      </Link>
-    </li>
-  ));
+  const noLocale = router.locale === 'no';
   return (
-    <footer className="text-center">
-      <ul>{localeList}</ul>
-      <Container>Laget av meg med Next.js</Container>
+    <footer className="text-center bg-yellow-400 dark:bg-neutral-800">
+      <Link href={router.asPath} locale={noLocale ? 'en' : 'no'}>
+        <a className="hover:underline">
+          {noLocale ? 'View english page' : 'Se norsk side'}
+        </a>
+      </Link>
+      {noLocale && <div>Laget av meg med Next.js</div>}
+      {!noLocale && <div>Made by me with Next.js</div>}
     </footer>
   );
 };

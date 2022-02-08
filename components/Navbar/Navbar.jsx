@@ -1,11 +1,32 @@
 import Link from 'next/link';
-import { navLinks } from '../../constants/navlinks';
 import Container from '../Container/Container';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import Logo from '../Logo/Logo';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
-  const links = navLinks.map((link) => {
+  const router = useRouter();
+
+  const norwegianLocale = router.locale === 'no';
+
+  const links = [
+    {
+      id: 1,
+      title: norwegianLocale ? 'Hjem' : 'Home',
+      href: '/',
+    },
+    {
+      id: 2,
+      title: norwegianLocale ? 'Om meg' : 'About',
+      href: '/om-meg',
+    },
+    {
+      id: 3,
+      title: norwegianLocale ? 'Kontakt' : 'Contact',
+      href: '/kontakt',
+    },
+  ];
+  const navlinks = links.map((link) => {
     return (
       <li key={link.id}>
         <Link href={link.href}>
@@ -23,7 +44,7 @@ const Navbar = () => {
 
           <div className="flex">
             <nav>
-              <ul className="flex justify-center items-center">{links}</ul>
+              <ul className="flex justify-center items-center">{navlinks}</ul>
             </nav>
             <ThemeSwitch />
           </div>

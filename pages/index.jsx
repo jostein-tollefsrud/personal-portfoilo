@@ -35,7 +35,7 @@ export default function Home(props) {
         </div>
       </header>
       <main className="mainContainer">
-        <h2>{t('home:projectsTitle')}</h2>
+        <h2 className="text-center">{t('home:projectsTitle')}</h2>
         <div className="card-container">
           {props.allProjectsData.map((project, index) => (
             <Card key={index} project={project} />

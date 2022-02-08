@@ -44,6 +44,12 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
 @media screen and (min-width: 440px) {
   body {
     font-size: 18px;
@@ -60,11 +66,17 @@ h1 {
   h1 {
     font-size: 3.5rem;
   }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
   h1 {
     font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
   }
 }
 

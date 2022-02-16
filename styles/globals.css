@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-body bg-yellow-50 dark:bg-neutral-900;
+    @apply bg-yellow-50 dark:bg-neutral-900;
   }
 
   header {
@@ -16,14 +16,14 @@
     @apply bg-inherit border-2 border-black dark:border-neutral-500;
   }
 
-  h1,
+  /* h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
     @apply font-heading font-extrabold;
-  }
+  } */
 
   #navbar svg {
     @apply dark:fill-white;
@@ -36,6 +36,18 @@ body {
   height: 100%;
   font-size: 16px;
   line-height: 1.6;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter',
+    'Lucida Typewriter', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
 }
 
 h1 {

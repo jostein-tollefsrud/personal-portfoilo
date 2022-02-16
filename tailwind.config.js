@@ -6,7 +6,6 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      body: ['"Courier Prime"', 'monospace'],
       heading: ['Barlow', 'sans-serif'],
     },
   },

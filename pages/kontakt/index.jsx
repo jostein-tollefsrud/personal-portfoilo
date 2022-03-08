@@ -1,6 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import AnchorTag from '../../components/AnchorTag/AnchorTag';
 import DownloadCVLink from '../../components/DownloadCVLink/DownloadCVLink';
 import GitHubLink from '../../components/GithubLink/GithubLink';
 
@@ -28,7 +29,14 @@ const Contact = () => {
 
           <GitHubLink value={t('common:githubProfile')} />
 
-          <p>{t('contact:desc')}</p>
+          <p className="max-w-xl mt-4">
+            {t('contact:desc')}{' '}
+            <AnchorTag
+              value={t('contact:sendMail')}
+              href="mailto:mail@josteintollfsrud.no"
+              target="_self"
+            />
+          </p>
         </header>
         <main className="mainContainer">
           <form className="bg-yellow-400 dark:bg-neutral-800 grid p-8">
@@ -41,10 +49,7 @@ const Contact = () => {
             <label htmlFor="message">{t('form:msg')}</label>
             <textarea name="message" id="message"></textarea>
 
-            <button
-              className="bg-blue-600 text-white font-heading font-bold tracking-wider py-5"
-              type="submit"
-            >
+            <button className="bg-blue-600 text-white py-4" type="submit">
               {t('form:send_msg')}
             </button>
           </form>

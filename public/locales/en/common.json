@@ -1,1 +1,8 @@
-{"contactMe":"Contact me","downloadCVTitle":"Download CV","footerValue":"Made by me with","githubProfile":"GitHub profile"}
+{
+  "contactMe": "Contact me",
+  "downloadCVTitle": "Download CV",
+  "footerValue": "Made by me with",
+  "githubProfile": "GitHub profile",
+  "liveDemo": "Open live demo",
+  "githubDemo": "View code on GitHub"
+}

@@ -4,6 +4,8 @@ date: 'March 5, 2021'
 excerpt: 'This is an app to take care of your plants.'
 cover_image: '/images/projects/mockup.jpeg'
 tags: ['JavaScript', 'React.js', 'MongoDB']
+liveDemo: '#'
+gitHub: '#'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

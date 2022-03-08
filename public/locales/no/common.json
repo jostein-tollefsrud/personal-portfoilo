@@ -1,1 +1,8 @@
-{"contactMe":"Kontakt meg","downloadCVTitle":"Last ned CV","footerValue":"Laget av meg med","githubProfile":"GitHub profil"}
+{
+  "contactMe": "Kontakt meg",
+  "downloadCVTitle": "Last ned CV",
+  "footerValue": "Laget av meg med",
+  "githubProfile": "GitHub profil",
+  "liveDemo": "Åpne live demo",
+  "githubDemo": "Se koden på GitHub"
+}

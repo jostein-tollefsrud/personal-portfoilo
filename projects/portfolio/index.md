@@ -1,9 +1,11 @@
 ---
-title: 'Nyeste prosjekt'
+title: 'Min portfolio'
 date: 'March 5, 2021'
 excerpt: 'Dette er et av mine nyeste prosjekter.'
 cover_image: '/images/projects/mockup.jpeg'
-tags: ['JavaScript', 'React.js', 'MongoDB', 'Express']
+tags: ['JavaScript', 'Next.js', 'i18n']
+liveDemo: '#'
+gitHub: '#'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

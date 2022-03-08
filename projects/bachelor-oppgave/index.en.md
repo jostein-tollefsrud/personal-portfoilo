@@ -1,9 +1,11 @@
 ---
-title: 'Et annet prosjekt'
+title: 'Bachelor thesis'
 date: 'March 5, 2021'
-excerpt: 'This is another project by me.'
+excerpt: 'In connection with the folder and exhibition, we will create our own website to show what we do.'
 cover_image: '/images/projects/mockup.jpeg'
-tags: ['JavaScript', 'Next.js', 'MongoDB']
+tags: ['JavaScript', 'Next.js', 'i18n']
+liveDemo: '#'
+gitHub: '#'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

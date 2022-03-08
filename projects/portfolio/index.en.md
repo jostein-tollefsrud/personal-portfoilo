@@ -1,9 +1,11 @@
 ---
-title: 'Exhibition Course'
+title: 'My portfolio'
 date: 'March 5, 2021'
-excerpt: 'In connection with the folder and exhibition, we will create our own website to show what we do.'
+excerpt: 'This is one of my latest projects.'
 cover_image: '/images/projects/mockup.jpeg'
 tags: ['JavaScript', 'Next.js', 'i18n']
+liveDemo: '#'
+gitHub: '#'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import AnchorTag from '../AnchorTag/AnchorTag';
 
-const Card = ({ project }) => {
+const Card = ({ project, liveDemo, githubDemo }) => {
   let tags;
   if (project.tags) {
     tags = project.tags.map((tag) => (
@@ -15,7 +16,10 @@ const Card = ({ project }) => {
         <Link href={`/prosjekter/${project.directory}`}>{project.title}</Link>
       </h3>
       <img src={project.cover_image} alt="" />
-      <ul className="tags-container">{tags}</ul>
+      <ul className="tags-container mb-4">{tags}</ul>
+      <AnchorTag value={liveDemo} href={project.liveDemo} icon="newTab" />
+      <AnchorTag value={githubDemo} href="" icon="gitHub" />
+
       {/* <Link href={`/prosjekter/${project.directory}`}>
         <a>Les mer</a>
       </Link> */}

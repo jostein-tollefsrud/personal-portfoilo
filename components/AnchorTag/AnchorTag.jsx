@@ -1,5 +1,4 @@
-import { FiDownload } from 'react-icons/fi';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiDownload, FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const AnchorTag = ({ value, href, target = '_blank', icon }) => {
   let iconType;
@@ -10,6 +9,9 @@ const AnchorTag = ({ value, href, target = '_blank', icon }) => {
     case 'newTab':
       iconType = <FiExternalLink className="inline-block ml-1 mb-1" />;
       break;
+    case 'gitHub':
+      iconType = <FiGithub className="inline-block ml-1 mb-1" />;
+      break;
     default:
       iconType = '';
       break;
@@ -18,7 +20,7 @@ const AnchorTag = ({ value, href, target = '_blank', icon }) => {
     <a
       href={href}
       target={target}
-      className="text-blue-600 cursor-pointer hover:text-blue-500 hover:underline"
+      className="text-blue-600 cursor-pointer hover:text-blue-500 hover:underline dark:text-blue-400"
     >
       {value}
       {iconType}

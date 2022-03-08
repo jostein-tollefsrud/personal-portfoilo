@@ -4,6 +4,8 @@ date: 'March 5, 2021'
 excerpt: 'Dette er en app for å passe på plantene dine.'
 cover_image: '/images/projects/mockup.jpeg'
 tags: ['JavaScript', 'React.js', 'MongoDB']
+liveDemo: '#'
+gitHub: '#'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

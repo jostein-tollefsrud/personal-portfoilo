@@ -26,7 +26,7 @@ export default function Home(props) {
         </h1>
         <div>
           <Link href="/kontakt">
-            <a className="bg-blue-600 hover:bg-blue-800 text-white btn">
+            <a className="bg-blue-600 hover:bg-blue-800 rounded-md text-white btn">
               {t('common:contactMe')}
             </a>
           </Link>
@@ -38,7 +38,12 @@ export default function Home(props) {
         <h2 className="text-center">{t('home:projectsTitle')}</h2>
         <div className="card-container">
           {props.allProjectsData.map((project, index) => (
-            <Card key={index} project={project} />
+            <Card
+              key={index}
+              project={project}
+              liveDemo={t('common:liveDemo')}
+              githubDemo={t('common:githubDemo')}
+            />
           ))}
         </div>
       </main>

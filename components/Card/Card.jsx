@@ -18,7 +18,7 @@ const Card = ({ project, liveDemo, githubDemo }) => {
       <img src={project.cover_image} alt="" />
       <ul className="tags-container mb-4">{tags}</ul>
       <AnchorTag value={liveDemo} href={project.liveDemo} icon="newTab" />
-      <AnchorTag value={githubDemo} href="" icon="gitHub" />
+      <AnchorTag value={githubDemo} href={project.gitHub} icon="gitHub" />
 
       {/* <Link href={`/prosjekter/${project.directory}`}>
         <a>Les mer</a>

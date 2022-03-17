@@ -2,10 +2,10 @@
 title: 'Plant Manager'
 date: 'March 5, 2021'
 excerpt: 'This is an app to take care of your plants.'
-cover_image: '/images/projects/mockup.jpeg'
+cover_image: '/images/projects/plant-manager.jpg'
 tags: ['JavaScript', 'React.js', 'MongoDB']
-liveDemo: '#'
-gitHub: '#'
+liveDemo: 'https://ntnu-plantmanager.netlify.app/'
+gitHub: 'https://github.com/jostein-tollefsrud/NTNU-plantmanager-frontend'
 ---
 
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat

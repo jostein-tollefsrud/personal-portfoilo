@@ -2,9 +2,9 @@
 title: 'Min portfolio'
 date: 'March 5, 2021'
 excerpt: 'Dette er et av mine nyeste prosjekter.'
-cover_image: '/images/projects/mockup.jpeg'
+cover_image: '/images/projects/portfolio.jpg'
 tags: ['JavaScript', 'Next.js', 'i18n']
-liveDemo: '#'
+liveDemo: 'https://josteintollefsrud.no/'
 gitHub: '#'
 ---
 

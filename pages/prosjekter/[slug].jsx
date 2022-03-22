@@ -1,11 +1,13 @@
 import { marked } from 'marked';
 import Head from 'next/head';
-import Link from 'next/link';
+import Image from 'next/image';
+// import Link from 'next/link';
 import { getAllProjectSlugs, getProjectData } from '../../lib/projects';
 
 const ProjectPage = ({
-  projectData: { title, content, date, tags, excerpt },
+  projectData: { title, content, date, tags, excerpt, cover_image },
 }) => {
+  console.log(cover_image);
   let tagList;
   if (tags) {
     tagList = tags.map((tag) => (
@@ -25,7 +27,8 @@ const ProjectPage = ({
         <ul className="flex flex-wrap justify-center gap-4">{tagList}</ul>
       </header>
       <main className="mainContainer">
-        <Link href="/">Tilbake</Link>
+        <Image src={cover_image} width="2250" height="1688" alt="" />
+        {/* <Link href="/">Tilbake</Link> */}
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </main>
     </>

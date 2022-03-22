@@ -18,7 +18,7 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      title: norwegianLocale ? 'Hjem' : 'Home',
+      title: norwegianLocale ? 'Prosjekter' : 'Projects',
       href: '/',
     },
     {
@@ -47,7 +47,7 @@ const Navbar = () => {
     <div id="navbar" className="bg-yellow-400 dark:bg-neutral-900">
       <Container>
         <div className="navbar_container">
-          <Link href="/">
+          <Link href="/" aria-hidden>
             <a className="w-11">
               <Logo />
             </a>

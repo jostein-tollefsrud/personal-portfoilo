@@ -28,18 +28,15 @@ const Contact = () => {
           <DownloadCVLink value={t('common:downloadCVTitle')} />
 
           <GitHubLink value={t('common:githubProfile')} />
-
-          <p className="max-w-xl mt-4">
-            {t('contact:desc')}{' '}
-            <AnchorTag
-              value={t('contact:sendMail')}
-              href="mailto:mail@josteintollfsrud.no"
-              target="_self"
-            />
-          </p>
         </header>
-        <main className="mainContainer">
-          <form className="bg-yellow-400 dark:bg-neutral-800 grid p-8">
+        <main className="mainContainer text-center">
+          <p className="max-w-3xl mt-4  m-auto">{t('contact:desc')} </p>
+          <AnchorTag
+            value={t('contact:sendMail')}
+            href="mailto:mail@josteintollfsrud.no"
+            target="_self"
+          />
+          {/* <form className="bg-yellow-400 dark:bg-neutral-800 grid p-8">
             <label htmlFor="name">{t('form:fullName')}</label>
             <input type="text" name="name" id="name" />
 
@@ -52,7 +49,7 @@ const Contact = () => {
             <button className="bg-blue-600 text-white py-4" type="submit">
               {t('form:send_msg')}
             </button>
-          </form>
+          </form> */}
         </main>
       </div>
     </>

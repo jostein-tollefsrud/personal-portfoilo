@@ -5,7 +5,7 @@ excerpt: 'I forbindelse med mappe og utsilling skal vi lage vår egen nettside f
 cover_image: '/images/projects/min-portfolio.png'
 tags: ['JavaScript', 'Next.js', 'i18n']
 liveDemo: 'https://josteintollefsrud.no/'
-gitHub: '#'
+gitHub: 'https://github.com/jostein-tollefsrud/personal-portfoilo'
 ---
 
 ## Prosess

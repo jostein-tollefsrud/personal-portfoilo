@@ -5,7 +5,7 @@ excerpt: 'In connection with the folder and exhibition, we will create our own w
 cover_image: '/images/projects/min-portfolio.png'
 tags: ['JavaScript', 'Next.js', 'i18n']
 liveDemo: 'https://josteintollefsrud.no/'
-gitHub: '#'
+gitHub: 'https://github.com/jostein-tollefsrud/personal-portfoilo'
 ---
 
 ## Process
